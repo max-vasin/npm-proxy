@@ -3,13 +3,11 @@ FROM verdaccio/verdaccio:3.4
 
 
 # Override base image volume
+# Temporary switch to root because of ECS volumes permissions
 USER root
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 RUN mkdir -p /c_verdaccio/plugins /c_verdaccio/conf /c_verdaccio/storage
 RUN chown -R verdaccio:verdaccio /c_verdaccio
-
-USER verdaccio
-
 
 RUN cd /c_verdaccio/plugins && \
     wget -O ./github-oauth-ui.zip https://github.com/max-vasin/verdaccio-github-oauth-ui/releases/download/v1.0.2/dist.zip && \

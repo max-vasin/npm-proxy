@@ -22,7 +22,6 @@ web:
 auth:
   github-oauth-ui:
     org: DevExpress # required, people within this org will be able to auth
-    cache-ttl-ms: 60000 # default to 30s if not present
 
 # a list of other known repositories we can talk to
 uplinks:
