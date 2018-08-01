@@ -1,5 +1,5 @@
 pipeline:
   docker:
     image: plugins/docker
-    repo: maxvasin/resolve-docker
+    repo: maxvasin/npm_proxy
     secrets: [ docker_username, docker_password ]
