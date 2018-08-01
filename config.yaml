@@ -11,9 +11,9 @@
 #
 
 # path to a directory with all packages
-storage: /c_verdaccio/storage
+storage: /c_verdaccio/storage/
 # path to a directory with plugins to include
-plugins: /c_verdaccio/plugins
+plugins: /c_verdaccio/plugins/
 
 web:
   # WebUI is enabled as default, if you want disable it, just uncomment this line
