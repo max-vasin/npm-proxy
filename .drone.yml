@@ -1,0 +1,5 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: maxvasin/resolve-docker
+    secrets: [ docker_username, docker_password ]
