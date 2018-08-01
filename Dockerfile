@@ -9,11 +9,11 @@ RUN chown -R verdaccio:verdaccio /c_verdaccio
 USER verdaccio
 
 RUN cd /c_verdaccio/plugins && \
-    wget -O ./verdaccio-github-oauth.zip https://github.com/max-vasin/verdaccio-github-oauth/archive/v1.1.1.zip && \
-    unzip ./verdaccio-github-oauth.zip && \
-    mv ./verdaccio-github-oauth-1.1.1 ./github-oauth && \
-    rm verdaccio-github-oauth.zip && \
-    cd ./github-oauth && \
+    wget -O ./verdaccio-github-oauth-ui.zip https://github.com/max-vasin/verdaccio-github-oauth-ui/archive/v1.0.1.zip && \
+    unzip ./verdaccio-github-oauth-ui.zip && \
+    mv ./verdaccio-github-oauth-ui-1.0.1 ./github-oauth-ui && \
+    rm verdaccio-github-oauth-ui.zip && \
+    cd ./github-oauth-ui && \
     yarn install
 
 ADD ./config.yaml /c_verdaccio/conf
