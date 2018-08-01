@@ -57,8 +57,9 @@ middlewares:
     enabled: true
 
   github-oauth:
-    client-id-env: GITHUB_CLIENT_ID_ENV_VAR_NAME
-    client-secret-env: GITHUB_SECRET_ENV_VAR_NAME
+    client-id-env: GITHUB_CLIENT
+    client-secret-env: GITHUB_SECRET
+
 # log settings
 logs:
 - {type: stdout, format: pretty, level: http}
