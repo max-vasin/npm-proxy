@@ -11,16 +11,16 @@
 #
 
 # path to a directory with all packages
-storage: /c_verdaccio/storage/
+storage: /c_verdaccio/storage
 # path to a directory with plugins to include
-plugins: /c_verdaccio/plugins/
+plugins: /c_verdaccio/plugins
 
 web:
   # WebUI is enabled as default, if you want disable it, just uncomment this line
   title: Verdaccio - ReSolve private NPM
 
 auth:
-  github-oauth:
+  github-oauth-ui:
     org: DevExpress # required, people within this org will be able to auth
     cache-ttl-ms: 60000 # default to 30s if not present
 
@@ -56,7 +56,7 @@ middlewares:
   audit:
     enabled: true
 
-  github-oauth:
+  github-oauth-ui:
     client-id-env: GITHUB_CLIENT
     client-secret-env: GITHUB_SECRET
 
