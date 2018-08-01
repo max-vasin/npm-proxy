@@ -11,7 +11,7 @@ USER verdaccio
 RUN cd /c_verdaccio/plugins && \
     wget -O ./verdaccio-github-oauth.zip https://github.com/max-vasin/verdaccio-github-oauth/archive/v1.1.1.zip && \
     unzip ./verdaccio-github-oauth.zip && \
-    mv ./verdaccio-github-oauth-1.1.1 ./verdaccio-github-oauth && \
+    mv ./verdaccio-github-oauth-1.1.1 ./github-oauth && \
     rm verdaccio-github-oauth.zip
 
 ADD ./config.yaml /c_verdaccio/conf
