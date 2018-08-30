@@ -53,7 +53,7 @@ packages:
 # To use `npm audit` uncomment the following section
 middlewares:
   audit:
-    enabled: true
+    enabled: false
 
   github-oauth-ui:
     client-id-env: GITHUB_CLIENT
@@ -61,5 +61,5 @@ middlewares:
 
 # log settings
 logs:
-- {type: stdout, format: pretty, level: http}
+- {type: stdout, format: pretty, level: debug}
 #- {type: file, path: verdaccio.log, level: info}
