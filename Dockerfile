@@ -1,4 +1,4 @@
-FROM verdaccio/verdaccio:3.8.1
+FROM verdaccio/verdaccio:3.11.7
 
 
 
