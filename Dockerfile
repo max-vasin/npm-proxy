@@ -16,5 +16,3 @@ RUN cd /c_verdaccio/plugins && \
     yarn install --production=false
 
 ADD ./config.yaml /c_verdaccio/conf
-
-CMD $APPDIR/bin/verdaccio --config /c_verdaccio/conf/config.yaml --listen $PROTOCOL://0.0.0.0:${PORT}
