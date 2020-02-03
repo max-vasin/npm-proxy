@@ -12,8 +12,6 @@
 
 # path to a directory with all packages
 storage: /c_verdaccio/storage
-# path to a directory with plugins to include
-plugins: /c_verdaccio/plugins
 
 web:
   # WebUI is enabled as default, if you want disable it, just uncomment this line
@@ -22,6 +20,8 @@ web:
 auth:
   github-oauth-ui:
     org: DevExpress # required, people within this org will be able to auth
+    client-id: GITHUB_CLIENT
+    client-secret: GITHUB_SECRET
 
 # a list of other known repositories we can talk to
 uplinks:
@@ -57,8 +57,7 @@ middlewares:
     enabled: false
 
   github-oauth-ui:
-    client-id-env: GITHUB_CLIENT
-    client-secret-env: GITHUB_SECRET
+    enabled: true
 
 # log settings
 logs:
