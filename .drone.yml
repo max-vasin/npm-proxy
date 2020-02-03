@@ -1,5 +1,16 @@
-pipeline:
-  docker:
+kind: pipeline
+type: docker
+name: publish
+
+steps:
+  - name: docker
     image: plugins/docker
     repo: maxvasin/npm_proxy
-    secrets: [ docker_username, docker_password ]
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      tags:
+        - latest
+        - ${DRONE_BUILD_NUMBER}
