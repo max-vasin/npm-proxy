@@ -5,8 +5,8 @@ name: publish
 steps:
   - name: docker
     image: plugins/docker
-    repo: maxvasin/npm_proxy
     settings:
+      repo: maxvasin/npm_proxy
       username:
         from_secret: docker_username
       password:
